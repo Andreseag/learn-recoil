@@ -1,8 +1,13 @@
+import { RecoilRoot } from 'recoil';
 import './App.css';
 import Routes from './routes';
 
 function App() {
-  return <Routes />;
+  return (
+    <RecoilRoot>
+      <Routes />
+    </RecoilRoot>
+  );
 }
 
 export default App;
