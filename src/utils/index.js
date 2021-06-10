@@ -6,10 +6,10 @@ const commonParams = {
   client_secret: process.env.REACT_APP_SPOTIFY_CLIENT_SECRET,
 };
 
-export const spotifyAuthCall = async (code) => {
+export const spotifyAuthCall = async (requiredParams) => {
   try {
     const params = {
-      code,
+      ...requiredParams,
       grant_type: 'authorization_code',
       ...commonParams,
     };
